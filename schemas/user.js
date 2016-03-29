@@ -13,6 +13,9 @@ var UserSchema = new mongoose.Schema({
   password : {type: String, required : true},
   expediente : [],
   especialidades : [],
+  mensajes: [],
+  hinicio : {type:String},
+  hfin : {type : String},
   scope : [String]
 });
 

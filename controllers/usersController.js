@@ -21,6 +21,9 @@ exports.createUser = {
          password : SHA3(request.payload.password),
          expediente : request.payload.expediente,
          especialidades : request.payload.especialidades,
+         mensajes : request.payload.mensajes,
+         hinicio : request.payload.hinicio,
+         hfin: request.payload.hfin,
          scope : request.payload.scope
 
        });
