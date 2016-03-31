@@ -59,6 +59,13 @@ exports.createUser = {
     }
   }
 
+  exports.getPacientes = {
+    handler: function(request,reply){
+      var users = user.find({scope : ["Paciente"]});
+      reply(users);
+    }
+  }
+
   exports.getDoctors = {
     handler: function(request,reply){
       var users = user.find({scope : ["Doctor"]});
