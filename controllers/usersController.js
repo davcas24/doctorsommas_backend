@@ -80,8 +80,8 @@ exports.createUser = {
     user.findOneAndUpdate(
       {correo : request.payload.correo},
         {scope: ["Doctor"]},
-        function(err, books){
-      books.save(function(err){
+        function(err, user){
+      user.save(function(err){
         if(err){
           console.log("Shit");
         }
@@ -89,4 +89,92 @@ exports.createUser = {
     });
     reply("ok");
   }
+}
+
+
+exports.updateexpediente = {
+handler: function(request, reply){
+  //console.log(request.payload);
+  console.log("backend");
+  user.findOneAndUpdate(
+    {correo : request.payload.correo},
+      {expediente: request.payload.expediente},
+      function(err, user){
+    user.save(function(err){
+      if(err){
+        console.log("Shit");
+      }
+    });
+  });
+  reply("ok");
+}
+}
+
+exports.updatemensajes = {
+handler: function(request, reply){
+  //console.log(request.payload);
+  console.log("backend");
+  user.findOneAndUpdate(
+    {correo : request.payload.correo},
+      {mensajes: request.payload.mensajes},
+      function(err, user){
+    user.save(function(err){
+      if(err){
+        console.log("Shit");
+      }
+    });
+  });
+  reply("ok");
+}
+}
+
+exports.updateDoctor = {
+handler: function(request, reply){
+  //console.log(request.payload);
+  console.log("backend");
+  user.findOneAndUpdate(
+    {correo : request.payload.correo},
+      {
+        nombre: request.payload.nombre,
+        apellido: request.payload.apellido,
+        telefono: request.payload.telefono,
+        ciudad: request.payload.ciudad,
+        ubicacion: request.payload.ubicacion,
+        hinicio:request.payload.hinicio,
+        hfin:request.payload.hfin,
+        image:request.payload.image
+      },
+      function(err, user){
+    user.save(function(err){
+      if(err){
+        console.log("Shit");
+      }
+    });
+  });
+  reply("ok");
+}
+}
+
+exports.updatePaciente = {
+handler: function(request, reply){
+  //console.log(request.payload);
+  console.log("backend");
+  user.findOneAndUpdate(
+    {correo : request.payload.correo},
+      {
+        nombre: request.payload.nombre,
+        apellido: request.payload.apellido,
+        telefono: request.payload.telefono,
+        ciudad: request.payload.ciudad,
+        image:request.payload.image
+      },
+      function(err, user){
+    user.save(function(err){
+      if(err){
+        console.log("Shit");
+      }
+    });
+  });
+  reply("ok");
+}
 }
