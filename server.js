@@ -14,7 +14,7 @@ server.connection({
               }
 });
 
-mongoose.connect('mongodb://mongodb://admin:admin@ds019648.mlab.com:19648/sistemasalud_ad');
+mongoose.connect('mongodb://admin:admin@ds019648.mlab.com:19648/sistemasalud_ad');
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error'));
