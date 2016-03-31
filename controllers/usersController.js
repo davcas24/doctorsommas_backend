@@ -110,7 +110,7 @@ handler: function(request, reply){
 }
 }
 
-exports.updatemensjaes = {
+exports.updatemensajes = {
 handler: function(request, reply){
   //console.log(request.payload);
   console.log("backend");
